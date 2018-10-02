@@ -31,7 +31,7 @@ public int[] twoSum(int[] nums, int target) {
 ```
 
 ### Complexity Analysis
-* Time complexity : O($n^2$). For each element, we try to find its complement by looping through the rest of array which takes O(n) time. Therefore, the time complexity is O($n^2$).
+* Time complexity : O(n^2). For each element, we try to find its complement by looping through the rest of array which takes O(n) time. Therefore, the time complexity is O(n^2).
 
 * Space complexity : O(1). 
 
