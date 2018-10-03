@@ -30,7 +30,7 @@ The pseudocode is as following:
   * Update carry = sum / 10.
   * Create a new node with the digit value of (sum mod 10) and set it to current node's next, then advance current node to next.
   * Advance both pp and qq.
-* Check if carry = 1carry=1, if so append a new node with digit 11 to the returning list.
+* Check if carry = 1, if so append a new node with digit 11 to the returning list.
 * Return dummy head's next node.
 
 Note that we use a dummy head to simplify the code. Without a dummy head, you would have to write extra conditional statements to initialize the head's value.
