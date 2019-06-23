@@ -3,18 +3,15 @@
  * @return {number}
  */
 const removeDuplicates = nums => {
-  let i = 0
-
-  for (let j = 0; j < nums.length;) {
-    if (nums[i] === nums[j]) {
-      j++
-    } else {
-      i++
-      nums[i] = nums[j]
+  return nums.reduce((acc, cur, index, arr) => {
+    if (index > 0) {
+      if (arr[index] !== arr[index - 1]) {
+        return acc + 1
+      }
     }
-  }
 
-  return i + 1
+    return acc
+  }, 1)
 }
 
 module.exports = removeDuplicates
