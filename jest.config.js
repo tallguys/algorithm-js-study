@@ -2,7 +2,7 @@
 
 module.exports = {
   verbose: true,
-  rootDir: 'src',
+  rootDir: '.',
   moduleFileExtensions: ['js', 'json'],
   testEnvironment: 'node',
   moduleDirectories: ['node_modules', '<rootDir>'],
