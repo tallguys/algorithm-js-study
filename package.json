@@ -3,7 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --fix --ext .js --config .eslintrc.json ."
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix --ext .js --config .eslintrc.json ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
+    }
   },
   "keywords": [],
   "author": "",
@@ -19,6 +31,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "faker": "^4.1.0",
+    "husky": "^8.0.3",
     "jest": "^25.2.3"
   }
 }
