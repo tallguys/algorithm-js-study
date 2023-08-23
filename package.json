@@ -4,16 +4,12 @@
   "description": "",
   "scripts": {
     "test": "jest",
-    "lint": "eslint --fix --ext .js --config .eslintrc.json ."
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix --ext .js --config .eslintrc.json ."
-    ]
+    "lint": "eslint --fix --ext .js --config .eslintrc.json .",
+    "husky": "husky install"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "yarn lint",
       "pre-push": "yarn test"
     }
   },
